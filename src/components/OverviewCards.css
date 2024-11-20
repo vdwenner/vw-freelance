@@ -1,0 +1,30 @@
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  
+  .overview-card {
+    background-color: #f0f4f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .overview-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  @media (max-width: 768px) {
+    .overview-cards {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .overview-card {
+      margin-bottom: 20px;
+    }
+  }
+  

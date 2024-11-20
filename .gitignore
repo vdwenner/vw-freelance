@@ -1,0 +1,19 @@
+# Ignore environment variables file
+.env
+
+# Ignore log files
+*.log
+
+# Ignore build directory
+/build/
+
+# Node.js dependencies
+node_modules/
+
+#Python Files
+__pycache__/
+*.pyc
+
+# System Files
+.DS_Store
+Thumbs.db

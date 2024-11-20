@@ -1,0 +1,44 @@
+.hero-section {
+    background: url('../media/mountain-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtext {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .hero-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #90ee90;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #32cd32;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 1.8rem;
+    }
+  
+    .hero-button {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

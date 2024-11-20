@@ -1,0 +1,44 @@
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+  
+  .about-hero {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .about-hero img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .about-content {
+    flex: 2;
+    padding: 20px;
+  }
+  
+  .skills ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      order: 3;
+    }
+  }
+  
