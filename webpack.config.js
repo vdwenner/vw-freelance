@@ -1,11 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { debug } = require('console');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // Import CleanWebpackPlugin
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // Import CopyWebpackPlugin
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    theme: './src/theme-toggle.js' // Add entry for light/dark mode script or other additional scripts
+  },
   output: {
     filename: '[name].[contenthash].bundle.js', // Ensure unique filenames for different chunks
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +28,20 @@ module.exports = {
       template: './public/index.html', // Points to your HTML template
       filename: 'index.html', // Output HTML file
     }),
-    new BundleAnalyzerPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+    new CleanWebpackPlugin(), // Use CleanWebpackPlugin to keep the dist directory clean
+    new HtmlWebpackPlugin({
+      template: './public/index.html', // Points to your HTML template
+      filename: 'index.html', // Output HTML file
+    }),
+    new CopyWebpackPlugin({ // Use CopyWebpackPlugin to copy static assets
+      patterns: [
+        { from: 'public/assets', to: 'assets' }, // Copy assets from public/assets to dist/assets
+      ],
+    }),
+
   ],
   module: {
     rules: [
@@ -43,6 +60,10 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource', // Handle image assets
       },
+      {
+        test: /\.(mp4|webm)$/,
+        type: 'asset/resource', // Handle video assets
+      },
     ],
   },
   resolve: {
@@ -53,22 +74,22 @@ module.exports = {
     children: true, // Keep error details for child compilations
   },
   optimization: {
-    runtimeChunk: 'single',
-    concatenateModules: true,
-    minimize: true,
     splitChunks: {
-      chunks: 'all', // Split all chunks for better optimization
+      chunks: 'all',
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all',
         },
-      },
+      },    
     },
+    runtimeChunk: 'single', // Create a single runtime bundle for better long-term caching
+    concatenateModules: true, // Modified to resolve issues related to concatenation scope
+    minimize: true, // Minimize for better performance in production builds
   },
-  experiments: {
-    topLevelAwait: true, // Allow top-level await for dynamic imports
-  },
-  cache: false, // Uncommented to try disabling cache if needed
+  // experiments: {
+    // topLevelAwait: true, // Allow top-level await for dynamic imports
+  // },
+  // cache: false, // Uncommented to try disabling cache if needed
 };

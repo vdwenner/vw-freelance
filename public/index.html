@@ -3,9 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vaughn Portfolio</title>
+  <title>Vaughn Wenner - Freelance Web Developer</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div id="root"></div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop>
+      <source src="./assets/mountain-sunrise.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <h1>Building Robust Web Solutions, Inspired by the Simplicity and Elegance of Nature</h1>
+      <p>Let’s scale your next project to new heights.</p>
+      <a href="#contact" class="button hire-me">Hire Me</a>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav id="navbar" class="nav transparent">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Vaughn Wenner</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/vaughnwenner" target="_blank" class="social-icon">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/vaughnwenner" target="_blank" class="social-icon">LinkedIn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Overview Cards -->
+  <section id="overview" class="overview">
+    <div class="overview-card">
+      <img src="./assets/web-development-icon.png" alt="Custom Web Development">
+      <h3>Custom Web Development</h3>
+      <p>Building fully bespoke websites tailored to your specific needs.</p>
+    </div>
+    <div class="overview-card">
+      <img src="./assets/responsive-design-icon.png" alt="Responsive Design">
+      <h3>Responsive Design</h3>
+      <p>Optimized for all screen sizes to reach your audience everywhere.</p>
+    </div>
+    <div class="overview-card">
+      <img src="./assets/api-icon.png" alt="API Integrations">
+      <h3>API Integrations</h3>
+      <p>Streamlining workflows through effective API connections.</p>
+    </div>
+    <div class="overview-card">
+      <img src="./assets/seo-icon.png" alt="SEO Optimization">
+      <h3>SEO Optimization</h3>
+      <p>Boosting your search engine rankings for increased visibility.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="footer-content">
+      <div class="footer-column quick-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column personal-message">
+        <h4>Inspired by the peaks, built for progress</h4>
+        <p>Seamless, effective, and user-focused web solutions.</p>
+      </div>
+      <div class="footer-column social-icons">
+        <a href="https://github.com/vaughnwenner" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/vaughnwenner" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.[contenthash].bundle.js"></script>
+  <script src="./theme.[contenthash].bundle.js"></script>
 </body>
 </html>
