@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { debug } = require('console');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = {
   entry: './src/index.js',
@@ -22,11 +24,12 @@ module.exports = {
       template: './public/index.html', // Points to your HTML template
       filename: 'index.html', // Output HTML file
     }),
+    new BundleAnalyzerPlugin(),
   ],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/, // Modified to also include .jsx files
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader', // Transpile modern JavaScript
@@ -45,21 +48,27 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'], // Allow importing JS, JSX and .Json without specifying extensions
   },
-    stats: {
-      errorDetails: true,
-      children: true,
-    },
+  stats: {
+    errorDetails: true, // Keep detailed error reporting
+    children: true, // Keep error details for child compilations
+  },
   optimization: {
-    //splitChunks: {
-      //chunks: 'all', // Split all chunks to smaller files for optimization,
-      runtimeChunk: 'single', // Create a single runtime bundle for better long-term caching
-      concatenateModules: true,
-      minimize: true,
+    runtimeChunk: 'single',
+    concatenateModules: true,
+    minimize: true,
+    splitChunks: {
+      chunks: 'all', // Split all chunks for better optimization
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
-    
-  //},
-   // experiments: {
-      //  topLevelAwait: true, // Allow top-level await for dynamic imports
-  //  },
- //   cache: false,
+  },
+  experiments: {
+    topLevelAwait: true, // Allow top-level await for dynamic imports
+  },
+  cache: false, // Uncommented to try disabling cache if needed
 };
