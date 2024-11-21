@@ -43,7 +43,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'], // Allow importing JS and JSX without specifying extensions
+    extensions: ['.js', '.jsx', '.json'], // Allow importing JS, JSX and .Json without specifying extensions
   },
     stats: {
       errorDetails: true,

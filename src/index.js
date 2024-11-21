@@ -12,8 +12,8 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/ProjectDetails/:projectId" element={<ProjectDetails />} />
-        <Route path="/PortfolioGallery" element={<PortfolioGallery />} />
+        <Route path="./components/ProjectDetails/:projectId" element={<ProjectDetails />} />
+        <Route path="./components/PortfolioGallery" element={<PortfolioGallery />} />
       </Routes>
     </Router>
   </React.StrictMode> // Adding React.StrictMode for additional checks
