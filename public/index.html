@@ -4,27 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vaughn Wenner - Freelance Web Developer</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero-section">
-    <video autoplay muted loop class="hero-video">
-      <source src="../src/media/mountain-video.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="hero-content">
-      <h1>Building robust web solutions, inspired by the simplicity and elegance of nature.</h1>
-      <p>Let’s scale your next project to new heights.</p>
-      <a href="contact.html" class="btn-hire-me">Hire Me</a>
-    </div>
-  </header>
-  
-
-  <!-- Navigation Bar -->
-  <nav id="navbar" class="nav transparent">
-    <div class="nav-container">
-      <a href="#home" class="nav-logo">Vaughn Wenner</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Vaughn Wenner</div>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -32,41 +20,164 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://github.com/vaughnwenner" target="_blank" class="social-icon">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/vaughnwenner" target="_blank" class="social-icon">LinkedIn</a></li>
       </ul>
-    </div>
-  </nav>
-
-  <!-- Overview Cards -->
-  <section id="overview" class="overview">
-    <div class="overview-card">
-      <img src="./assets/web-development-icon.png" alt="Custom Web Development">
-      <h3>Custom Web Development</h3>
-      <p>Building fully bespoke websites tailored to your specific needs.</p>
-    </div>
-    <div class="overview-card">
-      <img src="./assets/responsive-design-icon.png" alt="Responsive Design">
-      <h3>Responsive Design</h3>
-      <p>Optimized for all screen sizes to reach your audience everywhere.</p>
-    </div>
-    <div class="overview-card">
-      <img src="./assets/api-icon.png" alt="API Integrations">
-      <h3>API Integrations</h3>
-      <p>Streamlining workflows through effective API connections.</p>
-    </div>
-    <div class="overview-card">
-      <img src="./assets/seo-icon.png" alt="SEO Optimization">
-      <h3>SEO Optimization</h3>
-      <p>Boosting your search engine rankings for increased visibility.</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com"><img src="assets/linkedin-icon.svg" alt="LinkedIn"></a>
+        <a href="https://github.com"><img src="assets/github-icon.svg" alt="GitHub"></a>
+      </div>
+    </nav>
+  </header>
+  
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Building robust web solutions, inspired by the simplicity and elegance of nature.</h1>
+      <p>Let’s scale your next project to new heights.</p>
+      <button class="hire-me-btn">Hire Me</button>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="footer" class="footer">
+  <section id="overview" class="overview">
+    <div class="overview-card">
+      <img src="assets/web-dev-icon.svg" alt="Web Development Icon">
+      <h3>Custom Web Development</h3>
+      <p>Fully bespoke websites built to meet your needs.</p>
+    </div>
+    <div class="overview-card">
+      <img src="assets/responsive-design-icon.svg" alt="Responsive Design Icon">
+      <h3>Responsive Design</h3>
+      <p>Optimized for all screen sizes for the best user experience.</p>
+    </div>
+    <div class="overview-card">
+      <img src="assets/api-icon.svg" alt="API Integration Icon">
+      <h3>API Integrations</h3>
+      <p>Streamline workflows through seamless API connections.</p>
+    </div>
+    <div class="overview-card">
+      <img src="assets/seo-icon.svg" alt="SEO Optimization Icon">
+      <h3>SEO Optimization</h3>
+      <p>Get discovered by optimizing your website for search engines.</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-hero">
+      <img src="assets/vaughn-outdoors.jpg" alt="Vaughn Outdoors">
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I’m Vaughn Wenner, a web developer with a passion for solving coding challenges, much like climbing mountains — it requires persistence, creativity, and a clear strategy. With expertise in HTML, CSS, JavaScript, React, and Node.js, I’ve tackled numerous challenges, from custom websites to API integrations. In my free time, I enjoy hiking and contributing to environmental conservation efforts.</p>
+      <div class="fun-facts">
+        <h3>Fun Facts</h3>
+        <ul>
+          <li>Favorite Mountain: Mount Rainier</li>
+          <li>Hours Spent Outdoors in 2023: 250+</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="assets/project1-thumbnail.jpg" alt="E-commerce Outdoor Gear">
+        <div class="portfolio-item-info">
+          <h3>E-commerce for Outdoor Gear</h3>
+          <p>Built with React and Node.js, this site showcases products seamlessly across all devices.</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="assets/project2-thumbnail.jpg" alt="Portfolio Redesign">
+        <div class="portfolio-item-info">
+          <h3>Local Artist Portfolio Redesign</h3>
+          <p>Focused on responsive design to enhance user engagement and accessibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Services</h2>
+    <div class="services-accordion">
+      <div class="service-item">
+        <button class="accordion-btn">Custom Web Development</button>
+        <div class="service-content">
+          <p>Fully bespoke websites built to meet your exact specifications.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <button class="accordion-btn">Responsive Design</button>
+        <div class="service-content">
+          <p>Optimized for all screen sizes, from desktop to mobile.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <button class="accordion-btn">API Integrations</button>
+        <div class="service-content">
+          <p>Streamline workflows through seamless API connections.</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <button class="accordion-btn">Performance Optimization</button>
+        <div class="service-content">
+          <p>Ensuring fast, smooth site performance to keep users happy.</p>
+        </div>
+      </div>
+    </div>
+    <p class="cta">Need something else? Let’s discuss your unique project requirements.</p>
+  </section>
+
+  <section id="blog" class="blog">
+    <h2>Blog - Reflections on Tech & Trails</h2>
+    <div class="blog-grid">
+      <div class="blog-post">
+        <img src="assets/blog1-thumbnail.jpg" alt="Hiking and Problem Solving">
+        <h3>What Hiking Teaches Us About Problem-Solving in Web Development</h3>
+        <p>Discover how lessons from the trails can help with coding challenges.</p>
+      </div>
+      <div class="blog-post">
+        <img src="assets/blog2-thumbnail.jpg" alt="Nature-Inspired Design">
+        <h3>Nature-Inspired Design: Enhancing User Experience</h3>
+        <p>Explore how the elegance of nature can inspire beautiful web designs.</p>
+      </div>
+      <div class="blog-post">
+        <img src="assets/blog3-thumbnail.jpg" alt="APIs in the Wild">
+        <h3>APIs in the Wild: Streamlining Digital Adventures</h3>
+        <p>Learn how API integrations can make digital workflows effortless.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="project-type">Project Type</label>
+      <select id="project-type" name="project-type">
+        <option value="web-development">Web Development</option>
+        <option value="responsive-design">Responsive Design</option>
+        <option value="api-integrations">API Integrations</option>
+        <option value="performance-optimization">Performance Optimization</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p class="cta">Ready to take the first step? Let’s connect and bring your vision to life.</p>
+    <div class="social-icons">
+      <a href="https://linkedin.com"><img src="assets/linkedin-icon.svg" alt="LinkedIn"></a>
+      <a href="https://github.com"><img src="assets/github-icon.svg" alt="GitHub"></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="mountain-divider"></div>
     <div class="footer-content">
-      <div class="footer-column quick-links">
-        <h4>Quick Links</h4>
+      <div class="footer-links">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -76,18 +187,17 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-column personal-message">
-        <h4>Inspired by the peaks, built for progress</h4>
-        <p>Seamless, effective, and user-focused web solutions.</p>
-      </div>
-      <div class="footer-column social-icons">
-        <a href="https://github.com/vaughnwenner" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/vaughnwenner" target="_blank">LinkedIn</a>
+      <div class="footer-message">
+        <p>Inspired by the peaks, built for progress.</p>
+        <div class="social-icons">
+          <a href="https://linkedin.com"><img src="assets/linkedin-icon.svg" alt="LinkedIn"></a>
+          <a href="https://github.com"><img src="assets/github-icon.svg" alt="GitHub"></a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="./main.[contenthash].bundle.js"></script>
-  <script src="./theme.[contenthash].bundle.js"></script>
+  <script src="main.[contenthash].bundle.js"></script>
+  <script src="theme.[contenthash].bundle.js"></script>
 </body>
 </html>

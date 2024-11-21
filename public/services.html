@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Vaughn Wenner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Vaughn Wenner</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h1>My Services</h1>
+      <div class="service-list">
+        <div class="service-item">
+          <button class="accordion">Custom Web Development</button>
+          <div class="accordion-panel">
+            <p>Fully bespoke websites tailored to meet your specific requirements. Whether it's a personal portfolio or a large-scale business site, I provide robust and scalable solutions.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <button class="accordion">Responsive Design</button>
+          <div class="accordion-panel">
+            <p>Optimized for all screen sizes to ensure that your users get the best experience, whether they're browsing on desktop, tablet, or mobile.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <button class="accordion">API Integrations</button>
+          <div class="accordion-panel">
+            <p>Seamless integration with third-party services and APIs, enabling your application to connect, communicate, and automate workflows.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <button class="accordion">Performance Optimization</button>
+          <div class="accordion-panel">
+            <p>Ensuring your site is fast, efficient, and smooth for your visitors, increasing user satisfaction and improving search engine rankings.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cta">
+        <p>Need something else? Let's discuss your unique project requirements!</p>
+        <a href="contact.html" class="cta-button">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="dist/main.bundle.js"></script>
+  <script src="../src/theme-toggle.js"></script>
+  <script>
+    // Accordion Functionality
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(accordion => {
+      accordion.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

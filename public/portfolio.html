@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Vaughn Wenner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Vaughn Wenner</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio">
+    <div class="container">
+      <h1>My Work</h1>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="../src/media/outdoor-gear.jpg" alt="E-commerce site for outdoor gear">
+          <div class="portfolio-overlay">
+            <h3>E-commerce Site for Outdoor Gear</h3>
+            <p>Built with React and Node.js</p>
+            <a href="project-detail.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="../src/media/local-artist.jpg" alt="Portfolio redesign for local artist">
+          <div class="portfolio-overlay">
+            <h3>Portfolio Redesign for Local Artist</h3>
+            <p>Focused on responsive design</p>
+            <a href="project-detail.html" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- Add more portfolio items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <script src="dist/main.bundle.js"></script>
+</body>
+</html>
