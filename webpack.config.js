@@ -8,7 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin'); // Import CopyWebpackP
 module.exports = {
   entry: {
     main: './src/index.js',
-    theme: './src/theme-toggle.js' // Add entry for light/dark mode script or other additional scripts
+    theme: './src/theme-toggle.js', // Add entry for light/dark mode script or other additional scripts
+    stickyNav: './src/sticky-nav.js'
   },
   output: {
     filename: '[name].[contenthash].bundle.js', // Ensure unique filenames for different chunks
