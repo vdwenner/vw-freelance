@@ -20,7 +20,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Submitted:', formData);
-    // Here you could add logic to send the form data to a backend server
+    // Add logic to send the form data to a backend server
     setFormData({
       name: '',
       email: '',

@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { debug } = require('console');
 
 module.exports = {
   entry: './src/index.js',
@@ -18,7 +19,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Points to your HTML template
+      template: './public/index.html', // Points to your HTML template
       filename: 'index.html', // Output HTML file
     }),
   ],
@@ -44,11 +45,16 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'], // Allow importing JS and JSX without specifying extensions
   },
+    stats: {
+      errorDetails: true,
+      children: true,
+    },
   optimization: {
     //splitChunks: {
       //chunks: 'all', // Split all chunks to smaller files for optimization,
       runtimeChunk: 'single', // Create a single runtime bundle for better long-term caching
       concatenateModules: true,
+      minimize: true,
     },
     
   //},

@@ -8,6 +8,7 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
@@ -15,4 +16,5 @@ root.render(
         <Route path="/PortfolioGallery" element={<PortfolioGallery />} />
       </Routes>
     </Router>
+  </React.StrictMode> // Adding React.StrictMode for additional checks
 );
